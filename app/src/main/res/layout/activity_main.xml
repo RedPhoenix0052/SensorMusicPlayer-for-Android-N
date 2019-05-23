@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bkg"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#2e000000"
+        android:paddingTop="30dp"
+        android:paddingLeft="15dp"
+        android:text="@string/app_name"
+        android:textColor="#fbfbfc"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/playlist"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:dividerHeight="1.6dp"
+        android:divider="#92b3f5"
+        app:layout_constraintBottom_toTopOf="@+id/musicPanel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+    </ListView>
+
+    <LinearLayout
+        android:id="@+id/musicPanel"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#8077c5"
+        android:orientation="horizontal"
+        android:weightSum="5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4.15"
+            android:textColor="#000000"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:textSize="23sp" />
+
+        <Button
+            android:id="@+id/minibutton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.85"
+            android:background="@android:drawable/ic_media_pause" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
